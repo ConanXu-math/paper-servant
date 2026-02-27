@@ -1,0 +1,41 @@
+## Python & virtual env
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+
+## uv / packaging
+*.egg-info/
+dist/
+build/
+
+## OS / IDE
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
+
+## Logs & temp
+*.log
+logs/
+tmp/
+.pytest_cache/
+
+## Environment & secrets
+.env
+.env.*
+
+## Data / cache (customize if needed)
+cache/
+.cache/
+data/
+
+## Papers (downloaded PDFs)
+*.pdf
+# papers/
+
