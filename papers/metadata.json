@@ -1,1 +1,130 @@
-[]
+[
+    {
+        "title": "MediX-R1: Open Ended Medical Reinforcement Learning",
+        "authors": [
+            "Sahal Shaji Mullappilly",
+            "Mohammed Irfan Kurpath",
+            "Omair Mohamed",
+            "Mohamed Zidan",
+            "Fahad Khan",
+            "Salman Khan",
+            "Rao Anwer",
+            "Hisham Cholakkal"
+        ],
+        "published": "2026-02-26T18:59:46+00:00",
+        "summary": "We introduce MediX-R1, an open-ended Reinforcement Learning (RL) framework for medical multimodal large language models (MLLMs) that enables clinically grounded, free-form answers beyond multiple-choice formats. MediX-R1 fine-tunes a baseline vision-language backbone with Group Based RL and a composite reward tailored for medical reasoning: an LLM-based accuracy reward that judges semantic correctness with a strict YES/NO decision, a medical embedding-based semantic reward to capture paraphrases and terminology variants, and lightweight format and modality rewards that enforce interpretable reasoning and modality recognition. This multi-signal design provides stable, informative feedback for open-ended outputs where traditional verifiable or MCQ-only rewards fall short. To measure progress, we propose a unified evaluation framework for both text-only and image+text tasks that uses a Reference-based LLM-as-judge in place of brittle string-overlap metrics, capturing semantic correctness, reasoning, and contextual alignment. Despite using only $\\sim51$K instruction examples, MediX-R1 achieves excellent results across standard medical LLM (text-only) and VLM (image + text) benchmarks, outperforming strong open-source baselines and delivering particularly large gains on open-ended clinical tasks. Our results demonstrate that open-ended RL with comprehensive reward signals and LLM-based evaluation is a practical path toward reliable medical reasoning in multimodal models. Our trained models, curated datasets and source code are available at https://medix.cvmbzuai.com",
+        "pdf_url": "https://arxiv.org/pdf/2602.23363v1",
+        "categories": [
+            "cs.CV"
+        ],
+        "citation_count": 0,
+        "local_pdf_path": "/mnt/data/2602.23363v1.pdf"
+    },
+    {
+        "title": "Understanding Usage and Engagement in AI-Powered Scientific Research Tools: The Asta Interaction Dataset",
+        "authors": [
+            "Dany Haddad",
+            "Dan Bareket",
+            "Joseph Chee Chang",
+            "Jay DeYoung",
+            "Jena D. Hwang",
+            "Uri Katz",
+            "Mark Polak",
+            "Sangho Suh",
+            "Harshit Surana",
+            "Aryeh Tiktinsky",
+            "Shriya Atmakuri",
+            "Jonathan Bragg",
+            "Mike D'Arcy",
+            "Sergey Feldman",
+            "Amal Hassan-Ali",
+            "Rub\u00e9n Lozano",
+            "Bodhisattwa Prasad Majumder",
+            "Charles McGrady",
+            "Amanpreet Singh",
+            "Brooke Vlahos",
+            "Yoav Goldberg",
+            "Doug Downey"
+        ],
+        "published": "2026-02-26T18:40:28+00:00",
+        "summary": "AI-powered scientific research tools are rapidly being integrated into research workflows, yet the field lacks a clear lens into how researchers use these systems in real-world settings. We present and analyze the Asta Interaction Dataset, a large-scale resource comprising over 200,000 user queries and interaction logs from two deployed tools (a literature discovery interface and a scientific question-answering interface) within an LLM-powered retrieval-augmented generation platform. Using this dataset, we characterize query patterns, engagement behaviors, and how usage evolves with experience. We find that users submit longer and more complex queries than in traditional search, and treat the system as a collaborative research partner, delegating tasks such as drafting content and identifying research gaps. Users treat generated responses as persistent artifacts, revisiting and navigating among outputs and cited evidence in non-linear ways. With experience, users issue more targeted queries and engage more deeply with supporting citations, although keyword-style queries persist even among experienced users. We release the anonymized dataset and analysis with a new query intent taxonomy to inform future designs of real-world AI research assistants and to support realistic evaluation.",
+        "pdf_url": "https://arxiv.org/pdf/2602.23335v1",
+        "categories": [
+            "cs.HC",
+            "cs.AI",
+            "cs.IR"
+        ],
+        "citation_count": 0,
+        "local_pdf_path": "/mnt/data/2602.23335v1.pdf"
+    },
+    {
+        "title": "Utilizing LLMs for Industrial Process Automation",
+        "authors": [
+            "Salim Fares"
+        ],
+        "published": "2026-02-26T18:38:00+00:00",
+        "summary": "A growing number of publications address the best practices to use Large Language Models (LLMs) for software engineering in recent years. However, most of this work focuses on widely-used general purpose programming languages like Python due to their widespread usage training data. The utility of LLMs for software within the industrial process automation domain, with highly-specialized languages that are typically only used in proprietary contexts, remains underexplored. This research aims to utilize and integrate LLMs in the industrial development process, solving real-life programming tasks (e.g., generating a movement routine for a robotic arm) and accelerating the development cycles of manufacturing systems.",
+        "pdf_url": "https://arxiv.org/pdf/2602.23331v1",
+        "categories": [
+            "cs.SE",
+            "cs.AI"
+        ],
+        "citation_count": 0,
+        "local_pdf_path": "/mnt/data/2602.23331v1.pdf"
+    },
+    {
+        "title": "Toward Expert Investment Teams:A Multi-Agent LLM System with Fine-Grained Trading Tasks",
+        "authors": [
+            "Kunihiro Miyazaki",
+            "Takanobu Kawahara",
+            "Stephen Roberts",
+            "Stefan Zohren"
+        ],
+        "published": "2026-02-26T18:37:36+00:00",
+        "summary": "The advancement of large language models (LLMs) has accelerated the development of autonomous financial trading systems. While mainstream approaches deploy multi-agent systems mimicking analyst and manager roles, they often rely on abstract instructions that overlook the intricacies of real-world workflows, which can lead to degraded inference performance and less transparent decision-making. Therefore, we propose a multi-agent LLM trading framework that explicitly decomposes investment analysis into fine-grained tasks, rather than providing coarse-grained instructions. We evaluate the proposed framework using Japanese stock data, including prices, financial statements, news, and macro information, under a leakage-controlled backtesting setting. Experimental results show that fine-grained task decomposition significantly improves risk-adjusted returns compared to conventional coarse-grained designs. Crucially, further analysis of intermediate agent outputs suggests that alignment between analytical outputs and downstream decision preferences is a critical driver of system performance. Moreover, we conduct standard portfolio optimization, exploiting low correlation with the stock index and the variance of each system's output. This approach achieves superior performance. These findings contribute to the design of agent structure and task configuration when applying LLM agents to trading systems in practical settings.",
+        "pdf_url": "https://arxiv.org/pdf/2602.23330v1",
+        "categories": [
+            "cs.AI",
+            "q-fin.TR"
+        ],
+        "citation_count": 0,
+        "local_pdf_path": "/mnt/data/2602.23330v1.pdf"
+    },
+    {
+        "title": "Understanding Usage and Engagement in AI-Powered Scientific Research Tools: The Asta Interaction Dataset",
+        "authors": [
+            "Dany Haddad",
+            "Dan Bareket",
+            "Joseph Chee Chang",
+            "Jay DeYoung",
+            "Jena D. Hwang",
+            "Uri Katz",
+            "Mark Polak",
+            "Sangho Suh",
+            "Harshit Surana",
+            "Aryeh Tiktinsky",
+            "Shriya Atmakuri",
+            "Jonathan Bragg",
+            "Mike D'Arcy",
+            "Sergey Feldman",
+            "Amal Hassan-Ali",
+            "Rub\u00e9n Lozano",
+            "Bodhisattwa Prasad Majumder",
+            "Charles McGrady",
+            "Amanpreet Singh",
+            "Brooke Vlahos",
+            "Yoav Goldberg",
+            "Doug Downey"
+        ],
+        "published": "2026-02-26T18:40:28+00:00",
+        "summary": "AI-powered scientific research tools are rapidly being integrated into research workflows, yet the field lacks a clear lens into how researchers use these systems in real-world settings. We present and analyze the Asta Interaction Dataset, a large-scale resource comprising over 200,000 user queries and interaction logs from two deployed tools (a literature discovery interface and a scientific question-answering interface) within an LLM-powered retrieval-augmented generation platform. Using this dataset, we characterize query patterns, engagement behaviors, and how usage evolves with experience. We find that users submit longer and more complex queries than in traditional search, and treat the system as a collaborative research partner, delegating tasks such as drafting content and identifying research gaps. Users treat generated responses as persistent artifacts, revisiting and navigating among outputs and cited evidence in non-linear ways. With experience, users issue more targeted queries and engage more deeply with supporting citations, although keyword-style queries persist even among experienced users. We release the anonymized dataset and analysis with a new query intent taxonomy to inform future designs of real-world AI research assistants and to support realistic evaluation.",
+        "pdf_url": "https://arxiv.org/pdf/2602.23335v1",
+        "categories": [
+            "cs.HC",
+            "cs.AI",
+            "cs.IR"
+        ],
+        "citation_count": 0,
+        "local_pdf_path": "papers/2602.23335v1.pdf"
+    }
+]
