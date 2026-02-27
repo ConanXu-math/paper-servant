@@ -16,6 +16,7 @@ from agents.qa_agent import get_qa_agent
 from agents.knowledge_agent import get_knowledge_agent
 from tools.system_tools import SystemTools
 from tools.metadata_tools import MetadataTools
+from tools.chat_log_tools import ChatLogTools
 import os
 from dotenv import load_dotenv
 
@@ -47,6 +48,7 @@ def get_router_agent(model_id: str = "gpt-4o", max_tool_calls: Optional[int] = N
     # Initialize tools
     system_tools = SystemTools()
     metadata_tools = MetadataTools()
+    chat_log_tools = ChatLogTools()
     
     # Create a team of agents or use tools to delegate
 
@@ -280,7 +282,20 @@ def get_router_agent(model_id: str = "gpt-4o", max_tool_calls: Optional[int] = N
         ),
         "add_history_to_context": True,
         "num_history_runs": 5,
-        "tools": [fetch_papers, organize_papers, read_paper, ask_paper_question, ask_general_question, save_concept_to_wiki, open_pdf, check_local_paper, list_local_papers, open_note, reindex_knowledge_base],
+        "tools": [
+            fetch_papers,
+            organize_papers,
+            read_paper,
+            ask_paper_question,
+            ask_general_question,
+            save_concept_to_wiki,
+            open_pdf,
+            check_local_paper,
+            list_local_papers,
+            open_note,
+            reindex_knowledge_base,
+            chat_log_tools,
+        ],
         "description": "You are the main Router Agent for the Paper Servent system.",
         "instructions": [
             "You are the interface between the user and the specialized agents.",
@@ -296,6 +311,7 @@ def get_router_agent(model_id: str = "gpt-4o", max_tool_calls: Optional[int] = N
             " - `check_local_paper`: Check if a paper is already downloaded locally. Use this when the user asks 'Do I have paper X?' or 'Find paper X locally'.",
             " - `list_local_papers`: List ALL local PDF papers. Use this when the user asks 'What papers do I have?', 'Show local papers', or when a specific search fails.",
             " - `open_note`: Open the reading note of a specific local paper. Use this when the user says 'open note', 'show summary', or 'view note'.",
+            " - `chat_log_tools.log_chat_turn`: After you finish answering the user, you SHOULD log the latest question and your final answer for this turn.",
             
             "**Context Awareness & Memory**:",
             " - **CRITICAL**: Always keep track of the last paper ID mentioned or processed (e.g., in `read_paper` or `fetch_papers`).",
@@ -310,6 +326,7 @@ def get_router_agent(model_id: str = "gpt-4o", max_tool_calls: Optional[int] = N
             " - You are a **Router**, not a knowledge base. You MUST NOT answer user questions directly using your internal training data.",
             " - For ANY question about a paper's content, method, or results, you MUST use `ask_paper_question`.",
             " - For ANY general question about AI concepts, definitions, or history, you MUST use `ask_general_question`.",
+            " - After you produce the final answer for a turn, you SHOULD call `chat_log_tools.log_chat_turn` once with the latest user question as `question`, your final response as `answer`, and a short label (e.g., 'router') as `session_label`.",
             " - Only use your own text generation to summarize the output of tools or to clarify user intent.",
 
             "Always clarify the query ONLY if the context is truly ambiguous.",
